@@ -1,0 +1,3 @@
+[submodule "spark-on-k8s-operator"]
+	path = spark-on-k8s-operator
+	url = https://github.com/GoogleCloudPlatform/spark-on-k8s-operator.git
