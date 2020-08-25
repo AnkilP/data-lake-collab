@@ -1,0 +1,5 @@
+numpy
+onnx>=1.6.0
+tensorboard
+future
+crypten
