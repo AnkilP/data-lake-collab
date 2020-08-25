@@ -27,9 +27,9 @@ spec:
   type: Python
   pythonVersion: "3"
   mode: cluster
-  image: "spark-mpc:v0"
+  image: "ankilp/spark-mpc:v0"
   imagePullPolicy: Always
-  mainApplicationFile: local:///spark_path/alice.py
+  mainApplicationFile: local:///home/batman/Documents/FHE/datalakes/data-lake-collab/alice.py
   sparkVersion: "3.0.0"
   restartPolicy:
     type: OnFailure
