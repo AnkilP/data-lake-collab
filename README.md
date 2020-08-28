@@ -10,16 +10,48 @@ As Andrew Trask from OpenMined puts it (and I'm paraphrasing here): there are ca
 
 ## Introduction
 
-We're building a plugin for Spark that can split model training to different workers, 
+We're building a plugin for Spark that can split model training to different workers. As the name implies, the data will be stored on the data lakes.
 
+### Dependencies for local development
+
+* Helm
+* Kubernetes
+* Docker
+
+### Setup
+For our local setup, we use minikube
+
+```sh
+minikube start
+kubectl apply -f namespaces-spark.yaml
+helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator
+helm install incubator/sparkoperator --generate-name --namespace spark-operator --set sparkJobNamespace=default
+
+```
+For more information on the first step or for more granularity in setting up the spark oeprator, consult the website with the [helm chart](https://github.com/helm/charts/tree/master/incubator/sparkoperator).
+
+I've already pushed the docker image to docker hub (ankilp/spark-mpc) so we won't need to build the docker image again.
+
+Note that the spark operator is still experimental for Python so the image must always be pulled.
+
+Finally, we run a simple program (alice.py) using mpc.yaml:
+
+```sh
+kubectl apply -f mpc.yaml
+kubectl describe pods pyspark-pi 
+```
+
+You should see the events at the bottom.
 
 ## Internals
 
-We employ MPC architectures on Apache Spark. We picked Apache Spark due to its popularity and large community: we can integrate existing workflows on top of our platform. Moreover, we expect large latencies with 
+We employ MPC architectures on Apache Spark. We picked Apache Spark due to its popularity and large community: we can integrate existing workflows on top of our platform. Moreover, we expect large latencies with streaming data so we would like to have a separate offering for that (most likely Spark Streaming but that is very far into the future).
+
+
 
 
 ### List of TODO items
 
 * docker multistage builds
-
+* use spark streaming for streaming service
 
