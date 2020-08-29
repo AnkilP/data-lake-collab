@@ -43,9 +43,10 @@ kubectl describe pods pyspark-pi
 
 You should see the events at the bottom.
 
-## Internals
+## Architecture
 
-We employ MPC architectures on Apache Spark. We picked Apache Spark due to its popularity and large community: we can integrate existing workflows on top of our platform. Moreover, we expect large latencies with streaming data so we would like to have a separate offering for that (most likely Spark Streaming but that is very far into the future).
+We employ MPC architectures on Apache Spark. We picked Apache Spark due to its popularity and large community: we can integrate existing workflows on top of our platform. Moreover, we expect large latencies with streaming data so we do not recommend using this platform for streaming data (that is most likely better supported by Spark Streaming or Flink but that is very far into the future).
+
 
 
 
@@ -53,5 +54,5 @@ We employ MPC architectures on Apache Spark. We picked Apache Spark due to its p
 ### List of TODO items
 
 * docker multistage builds
-* use spark streaming for streaming service
+* use spark streaming/flink for streaming service
 
