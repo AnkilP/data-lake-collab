@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## Welcome to EnSnif
 
-You can use the [editor on GitHub](https://github.com/AnkilP/data-lake-collab/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+The aim of this project is to help data stakeholders collaborate and realize solutions to problems that previously would've required unfettered access to sensitive information. Our focus is on streaming data.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AnkilP/data-lake-collab/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Motivation
+There exists many cases where public information is found in private information. The canonical example given by Andrew Trask (from OpenMined) is of building a cancer detection model using patient data: the model itself is not unique to any specific person but the individual data point is unique. This private information is collected under the explicit trust (sometimes implicit) that the information won't be divulged (through any means). The conventional methods to keep this promise involved anonymizing data. However, the industry has denounced the practice since there were cases where participants' private information was divulged despite the dataset being anonymized. It stands that much good can come from using private information but it must be done judiciously; with a platform that preserves this privacy and also allows groups to collaborate, we expect groups to share data to build smarter and more robust models without giving up ownership of their data.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Leave me a message at ankil335@gmail.com
