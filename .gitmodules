@@ -4,3 +4,6 @@
 [submodule "scale_mamba/SCALE-MAMBA"]
 	path = scale_mamba/SCALE-MAMBA
 	url = git@github.com:KULeuven-COSIC/SCALE-MAMBA.git
+[submodule "kube-airflow"]
+	path = kube-airflow
+	url = git@github.com:mumoshu/kube-airflow.git
