@@ -1,3 +1,6 @@
 [submodule "spark-on-k8s-operator"]
 	path = spark-on-k8s-operator
 	url = https://github.com/GoogleCloudPlatform/spark-on-k8s-operator.git
+[submodule "scale_mamba/SCALE-MAMBA"]
+	path = scale_mamba/SCALE-MAMBA
+	url = git@github.com:KULeuven-COSIC/SCALE-MAMBA.git
